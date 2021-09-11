@@ -55,7 +55,7 @@ ContourTracker::ContourTracker()
 
 	if(m_Params.bEnableSimulation)
 	{
-		sub_cloud_clusters = nh.subscribe("/simu_cloud_clusters", 1, &ContourTracker::callbackGetCloudClusters, this);
+		sub_cloud_clusters = nh.subscribe("/detection/lidar_detector/cloud_clusters", 1, &ContourTracker::callbackGetCloudClusters, this);
 	}
 	else
 	{
